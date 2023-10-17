@@ -39,7 +39,7 @@ e.preventDefault();
     // console.log(imc);
     // console.log(situacao);
 }
-
+//calcula o imc
 function calcularImc(altura, peso){
 
     return peso / Math.pow(altura, 2)
@@ -48,7 +48,7 @@ function calcularImc(altura, peso){
    
 }
 
-
+//gera o texto da situacao
 function retornaSituacao(imc) {
     if (imc < 18.5) {
         return "Magreza severa"
@@ -73,7 +73,28 @@ function retornaSituacao(imc) {
 
     // return 'situação'
 }
+//gera o objeto com os dados da pessoa
+const pessoa = {nome, altura, peso, imc, situacao: txtSituacao};
 
+//retorna um objeto data
+const dt = new Date();
+
+//retorna a data de 1 a 31
+const dia = dt.getDate() < 10? `0${dt.getDate()}` : dt.getDate();
+
+//retorna de 0 a 11
+const mes = dt.getMonth() + 1;
+
+//returna o mes com 4 digitos yyyy
+const ano = dt.getFullYear();
+
+const dtCadastro = dia + mes + ano;
+
+pessoa.dt = dtCadastro;
+//adiciona a pessoa na lista
+arrPessoas.push(pessoa);
+
+//listar pessoas
 function listarPessoas(){
     console.log(arrPessoas)
 
