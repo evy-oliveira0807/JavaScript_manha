@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Criar um formulário para receber o nome do usuário -->
+    <!-- e substituir por um nickname -->
+    <!-- ao clicar no botão o nickname deve ser exibido na tela -->
+
+    <h1>Gerador de nickname</h1>
+
+    <form action="" onsubmit="gerarNick()">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Digite o seu nome..." id="nome">
+
+        <button type="submit">Gerar nickname</button>
+
+        <p>Seu nickname é: <strong id="nick"></strong></p>
+    </form>
+
+    <script>
+
+        function gerarNick(){
+            event.preventDefault()
+
+        let nome = document.getElementById("nome").value
+        random = (Math.random() + 1).toString(36).substring(7)
+        let nickname;
+
+        let novoNome = nome.substring(0,4)
+
+        nickname = novoNome + random;
+
+        document.getElementById("nick").innerHTML = nickname
+
+        }
+
+    </script>
+</body>
+</html>

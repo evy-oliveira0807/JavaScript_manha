@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let frutas = ['banana', 'maçã', 'morango'];
+
+        console.log(frutas);
+        console.log(`Quantidade de frutas: ${frutas.length}`);
+       
+        frutas.push('uva')
+        frutas.push('mamão')
+        frutas.push('amora')
+        
+        console.log(`Quantidade de frutas: ${frutas.length}`);
+        
+        frutas.sort();//ordena os valores do array
+
+
+        console.log();
+        console.log();
+        
+       //for (let index = 0; index < frutas.length; index++) {console.log(`Fruta${index + 1} ${frutas[index]}`);}
+
+     //  frutas.forEach(function(fruta, i){
+    //    console.log(`fruta${i}fruta ${fruta}`);
+    //   })
+
+
+    let pratileira = [
+        "Cerveja",
+        "Coca-Cola",
+        "Agua",
+        "Gatorade",
+        "Guarana Antartica",
+        "Tubaina",
+        "H2o"
+    ];
+    let bebida = pratileira[7]
+
+    switch (bebida) {
+        case "Cerveja":
+    console.log("Achei sua Cerveja!");
+        break;
+        case "Coca":
+    console.log("Achei sua Coca!");
+        break;
+        case "Agua":
+    console.log("Achei sua Agua!");
+        break;
+        case "Gatorade":
+    console.log("Achei sua Gatorade!");
+        break;
+        case "Tubaina":
+    console.log("Toma aki sua tuba!");
+        break;
+        case "Guarana Antartica":
+    console.log("Garana bem gelado saindo!");
+        break;
+        case "H2o":
+    console.log("H2o na mesa!");
+        break;
+
+        default:
+            console.log(` Nao temos essa bebida: (${bebida})`);
+            break;
+    }
+        
+    </script>
+</body>
+</html>

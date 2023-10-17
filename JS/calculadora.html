@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Simples Calc</h1>
+
+
+    <form onsubmit="calcular()">
+        <label for="n1">Primeiro Numero</label>
+        <input type="number" id="n1">
+       <br></br>
+        <label for="n2">Segundo Numero</label>
+        <input type="number" id="n2">
+        <br><br>
+        <label for="operacao">Operacao</label>
+        <select id="operacao">
+            <option value="">Selecione</option>
+            <option value="+">Soma</option>
+            <option value="-">Subtracao</option>
+            <option value="*">Multiplicacao</option>
+            <option value="/">Divisao</option>
+        </select>
+        
+        <button>Calcular</button>
+    </form>
+
+    <script>
+        function calcular()//soma
+         {
+            event.preventDefault(); //para o submit do formulario
+
+            //criar uma variavel para cada numero
+            let n1 = parseFloat(document.getElementById('n1').value);
+            let n2 = parseFloat(document.getElementById('n2').value);
+            let op =document.getElementById('operacao').value; 
+            let resultado;
+
+            if (op == '+')
+            {
+              resultado = somar(n1,n2);
+              alert(`Resultado da soma e: ${resultado}`);
+
+            } 
+             else if (op == '-')
+            {
+                resultado = subtrair(n1,n2);
+                alert(`Resultado da soma e: ${resultado}`);
+            } 
+             else if (op == '*')
+            {
+                resultado = Multiplicacao(n1,n2);
+                alert(`Resultado da soma e: ${resultado}`);
+            } 
+             else if (op == '/')
+            {
+                resultado = Divisao(n1,n2);
+                alert(`Resultado da soma e: ${resultado}`);
+            } 
+            //continuar a validacao para as 5 opcoes
+                    
+            //criar a validacao para as 5 opcoes
+
+          
+            //exibir o resultadp em uma alert - UTILIZAR A INTERPOLACAO
+
+            alert(`Resultado da soma e: ${resultado}`)
+       
+        } //fim da funcao calcular
+
+        function somar(x, y) {
+           return x + y;
+        }
+        function subtrair(x, y) {
+           return x - y;
+        }
+        function Multiplicacao(x,y) {
+           return x * y;
+        }
+        function Divisao(x,y)   {
+            return x / y;
+        }
+    </script>
+</body>
+
+</html>
