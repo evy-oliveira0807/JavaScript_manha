@@ -26,4 +26,10 @@ console.log(doisDuzdntos);
 
 console.log(comentariosOk);
 
-
+const objVendedor = {
+    nome: vendedor,
+    comissao,
+    idade: 41
+}
+console.log("asdf");
+console.log(objVendedor);
