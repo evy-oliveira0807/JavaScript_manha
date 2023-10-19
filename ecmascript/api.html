@@ -11,40 +11,39 @@
         const url = "https://viacep.com.br/ws/03208020/json/";
 
 //get
-fetch(url)
-.then((resposta)=> {
-    //objeto promise resolvido (header, body, others)
-    return resposta.json();
-})
-.then((dados)=>{
-    console.log(dados);
-    console.log();
+// fetch(url)
+// .then((resposta)=> {
+//     //objeto promise resolvido (header, body, others)
+//     return resposta.json();
+// })
+// .then((dados)=>{
+//     console.log(dados);
+//     console.log();
 
 
-    console.log(`
-        Endereco: ${dados.logradouro}
-        Cidade: ${dados.localidade}
-        Estado: ${dados.uf}
-    `);
-})
-.catch((e) => {
-    console.log(`Deu ruim: ${e.typeError}`);
-    console.log(e);
-});
-        // //get
-        // const returno = fetch('https://viacep.com.br/ws/03208020/json/')
-        // .then((resp) =>{//promisse resolvida
-        //  console.log(resp);//objeto cheio de coisas
-        //  return resp.json;//retorna os dados
-        // })
-        // .then( (dados) =>{//os dados do corpo dapromise the object
-        //   console.log(dados);
-        // })
-        // .catch((e)=>{
-        //     console.log("Deu ruim!");
-        // })
+//     console.log(`
+//         Endereco: ${dados.logradouro}
+//         Cidade: ${dados.localidade}
+//         Estado: ${dados.uf}
+//     `);
+// })
+// .catch((e) => {
+//     console.log(`Deu ruim: ${e.typeError}`);
+//     console.log(e);
+// });
 
-
+async function chamarAPI(Endereco){
+    try {
+        const promise = await fetch(Endereco);
+        const dados = await promise.json();
+        console.log(dados);
+       
+    }catch (e){
+        console.log("Deusruim na API");
+    }
+}
+chamarAPI(url);//chamada a uma api
+    
     </script>
     
 </body>
