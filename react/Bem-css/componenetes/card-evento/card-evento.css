@@ -1,69 +1,51 @@
-.caixinhas {
-    width: 250px;
-    height: 205px;
-    top: 1009px;
-    left: 270px;
-    radius: 5px;
+/* Import*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
 
-    border: 2px solid #821B47;
+.section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
 
 }
 
-.caixinhas__titulo {
+/* Conteiner */
+.card{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #821B47;
+    border-radius: 5px;
+}
 
-    width: 144px;
-    height: 27px;
-    top: 1040px;
-    left: 324px;
+/* Titulo */
+.card__title{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
-    letter-spacing: 0em;
-    text-align: center;
 }
 
-.caixinhas__texto {
-    width: 192px;
-    height: 72px;
-    top: 1098px;
-    left: 299px;
+/* Descricao */
+.card__description{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: center;
-
-
-
+    padding-left: 40px;
+    padding-right: 29px;
 }
 
-.button {
-
-    /* width: 85px; */
-    height: 27px;
-    top: 1211px;
-    left: 353px;
-    font-family: Poppins;
+/* Conexao */
+.card__title--conect{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    line-height: 27px;
-    /* letter-spacing: 0em; */
-    text-align: left;
+    color: #B51D44;
+    text-decoration: none;
+}
 
-
-    /* display: block;
-    width: 300px;
-    height: 40px;
-    min-width: 150px;
-    margin-bottom: 20px;
-  
-    color:#B51D44;
-    text-align: center;
-   
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px; */
+.card__title--dissable{
+    pointer-events: none;
+    color: #999;
 }
