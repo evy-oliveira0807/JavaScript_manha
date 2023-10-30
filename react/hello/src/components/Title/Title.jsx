@@ -5,9 +5,7 @@ import './Title.css'
 const Title = (props) =>  {
 
     return (
-        <h1 className="title">Hello {props.text}</h1>
-        
-
+        <h1 className="title">Hello {props.nome} {props.sobrenome}</h1> 
     );
 }
 export default Title;
