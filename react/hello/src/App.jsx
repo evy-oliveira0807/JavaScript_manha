@@ -32,11 +32,11 @@ function App() {
         />
       </Container> */}
 
-      {/* <Container>
+      <Container>
         <Contador></Contador>
-      </Container> */}
+      </Container>
 
-      <Rotas/>
+      {/* <Rotas/> */}
     </div>
   );
 }
